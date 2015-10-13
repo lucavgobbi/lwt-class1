@@ -1,0 +1,22 @@
+{
+  "name": "lwt-class1",
+  "version": "1.0.0",
+  "description": "while (teach()) { learn(); }",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucavgobbi/lwt-class1.git"
+  },
+  "keywords": [
+    "lwt"
+  ],
+  "author": "@lucavgobbi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lucavgobbi/lwt-class1/issues"
+  },
+  "homepage": "https://github.com/lucavgobbi/lwt-class1"
+}
