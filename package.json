@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/lucavgobbi/lwt-class1/issues"
   },
-  "homepage": "https://github.com/lucavgobbi/lwt-class1"
+  "homepage": "https://github.com/lucavgobbi/lwt-class1",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "*"
+  }
 }
