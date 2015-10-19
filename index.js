@@ -9,7 +9,6 @@ var app = express();
 
 var middleWare = function (req, res, next) {
     "use strict";
-    res.andre = 3;
     next();
 };
 
@@ -38,5 +37,5 @@ app.post('/', middleWare, function (req, res) {
 
 var server = app.listen(3000, function (){
     "use strict";
-    console.log('Rodando');
+    console.log("Hello World!!! I'm Listening");
 })

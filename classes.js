@@ -4,19 +4,29 @@
 "use strict";
 
 /**
- * UserAsClass
+ * PersonAsClass
  * Defines a class (ES6)
  */
-class UserAsClass {
+class PersonAsClass {
     constructor(options) {
         "use strict";
         this.name = options.name;
-        this.age = options.age;
+        this.weight = options.weight;
+        this.height = options.height;
+    }
+
+    walk (steps) {
+        // Supose that each step can walk 1/3 of the height
+        return steps * this.height / 3;
+    }
+
+    sleep () {
+        return this.name + " slept for 1h";
     }
 
     toString () {
         "use strict";
-        return this.name + " is " + this.age + " years old";
+        return this.name + " is " + this.weight + "m tall";
     }
 
     whoIAm () {
@@ -29,40 +39,63 @@ class UserAsClass {
 }
 
 /**
- * UserAsPrototype
+ * personAsPrototype
  * Defines a prototype (ES5)
  */
-var userAsPrototype = function (options) {
+var personAsPrototype = function (options) {
     this.name = options.name;
-    this.age = options.age;
+    this.weight = options.weight;
+    this.height = options.height;
 };
 
-userAsPrototype.prototype.toString = function () {
-    return this.name + " is " + this.age + " years old";
+personAsPrototype.prototype.walk = function (steps) {
+    // Supose that each step can walk 1/3 of the height
+    return steps * this.height / 3;
 };
 
-userAsPrototype.prototype.whoIAm = function () {
+personAsPrototype.prototype.sleep = function () {
+    return this.name + " slept for 1h";
+};
+
+personAsPrototype.prototype.toString = function () {
+    return this.name + " is " + this.weight + "m tall";
+};
+
+personAsPrototype.prototype.whoIAm = function () {
     return "I'm a prototype";
 };
 
-userAsPrototype.someStatic = function (name) {
+personAsPrototype.someStatic = function (name) {
     return "I would be " + name;
 };
 
 
 
-// Instantiate UserAsClass
-var userAsClassInstance = new UserAsClass({ name: "Luca", age: "26" });
+// Instantiate PersonAsClass
+var meAsClass = new PersonAsClass({ name: "Luca", height: 1.7, weight: 60 });
+var youAsClass = new PersonAsClass({ name: "Luca", height: 1.78, weight: 71 });
 
-// Instantiate UserAsPrototype
-var userAsPrototypeInstance = new userAsPrototype({ name: "Luca", age: "26" });
+// Instantiate PersonAsPrototype
+var meAsPrototype = new personAsPrototype({ name: "Luca", height: 1.7, weight: 60 });
+var youAsPrototype = new personAsPrototype({ name: "You", height: 1.78, weight: 71 });
 
 
-console.log(userAsClassInstance.whoIAm());
-console.log(userAsClassInstance.toString());
-console.log(UserAsClass.someStatic("John"));
+console.log(meAsClass.whoIAm());
+console.log(meAsClass.walk(5));
+console.log(meAsClass.toString());
+console.log(meAsClass.someStatic("John"));
 
-console.log(userAsPrototypeInstance.whoIAm());
-console.log(userAsPrototypeInstance.toString());
-console.log(userAsPrototype.someStatic("John"));
+console.log(youAsClass.whoIAm());
+console.log(youAsClass.walk(5));
+console.log(youAsClass.toString());
+console.log(youAsClass.someStatic("John"));
 
+console.log(meAsPrototype.whoIAm());
+console.log(meAsPrototype.walk());
+console.log(meAsPrototype.toString());
+console.log(meAsPrototype.someStatic("John"));
+
+console.log(youAsPrototype.whoIAm());
+console.log(youAsPrototype.walk());
+console.log(youAsPrototype.toString());
+console.log(youAsPrototype.someStatic("John"));you
