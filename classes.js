@@ -83,19 +83,19 @@ var youAsPrototype = new personAsPrototype({ name: "You", height: 1.78, weight: 
 console.log(meAsClass.whoIAm());
 console.log(meAsClass.walk(5));
 console.log(meAsClass.toString());
-console.log(meAsClass.someStatic("John"));
+console.log(PersonAsClass.someStatic("John"));
 
 console.log(youAsClass.whoIAm());
 console.log(youAsClass.walk(5));
 console.log(youAsClass.toString());
-console.log(youAsClass.someStatic("John"));
+console.log(PersonAsClass.someStatic("John"));
 
 console.log(meAsPrototype.whoIAm());
 console.log(meAsPrototype.walk());
 console.log(meAsPrototype.toString());
-console.log(meAsPrototype.someStatic("John"));
+console.log(personAsPrototype.someStatic("John"));
 
 console.log(youAsPrototype.whoIAm());
 console.log(youAsPrototype.walk());
 console.log(youAsPrototype.toString());
-console.log(youAsPrototype.someStatic("John"));you
+console.log(personAsPrototype.someStatic("John"));
