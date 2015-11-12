@@ -16,7 +16,7 @@ class PersonAsClass {
     }
 
     walk (steps) {
-        // Supose that each step can walk 1/3 of the height
+        // Suppose that each step can walk 1/3 of the height
         return steps * this.height / 3;
     }
 
@@ -49,7 +49,7 @@ var personAsPrototype = function (options) {
 };
 
 personAsPrototype.prototype.walk = function (steps) {
-    // Supose that each step can walk 1/3 of the height
+    // Suppose that each step can walk 1/3 of the height
     return steps * this.height / 3;
 };
 
@@ -68,8 +68,6 @@ personAsPrototype.prototype.whoIAm = function () {
 personAsPrototype.someStatic = function (name) {
     return "I would be " + name;
 };
-
-
 
 // Instantiate PersonAsClass
 var meAsClass = new PersonAsClass({ name: "Luca", height: 1.7, weight: 60 });
